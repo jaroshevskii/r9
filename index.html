@@ -167,11 +167,12 @@
       <i class="icon fab fa-whatsapp"></i>WhatsApp
     </a>
     <a class="button button-phone" href="tel:+380688526717">
-      <i class="icon fas fa-mobile-alt"></i>Мобільний
+      <i class="icon fas fa-mobile-alt"></i>Зателефонувати
     </a>
-    <a class="button button-contact" href="sms:+380688526717" title="Поділитись контактом" target="_blank">
-  <i class="icon fas fa-user-plus"></i>Поділитись контактом
+<a id="copy-button" class="button button-copy">
+  <i class="icon far fa-copy"></i>Скопіювати номер
 </a>
+
     <div class="decoration"></div>
     <div class="accent-lines">
       <div class="accent-line" style="top: 10%;"></div>
@@ -181,5 +182,34 @@
       <div class="accent-line" style="top: 90%;"></div>
     </div>
   </div>
+<script>
+  // Отримайте посилання на кнопку та номер телефону
+  var copyButton = document.getElementById("copy-button");
+  var phoneNumber = "+380688526717"; // Змініть на свій номер
+
+  // Додайте обробник події для кнопки
+  copyButton.addEventListener("click", function() {
+    // Створіть новий елемент для тимчасового збереження тексту
+    var tempInput = document.createElement("input");
+    // Встановіть значення цього елементу на номер телефону
+    tempInput.value = phoneNumber;
+    // Додайте елемент до документу
+    document.body.appendChild(tempInput);
+    // Виділіть текст у введеному полі
+    tempInput.select();
+    // Скопіюйте вміст в буфер обміну
+    document.execCommand("copy");
+    // Видаліть тимчасовий елемент
+    document.body.removeChild(tempInput);
+    
+    // Змініть текст кнопки на "Скопійовано"
+    copyButton.innerHTML = '<i class="icon far fa-check-circle"></i>Скопійовано';
+    // Після короткого часу поверніть текст кнопки назад
+    setTimeout(function() {
+      copyButton.innerHTML = '<i class="icon far fa-copy"></i>Скопіювати номер';
+    }, 2000); // Після 2 секунд
+  });
+</script>
+
 </body>
 </html>
