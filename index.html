@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
   body {
+    background-color: black;
     background-image: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,24 +26,24 @@
     width: 300px;
     padding: 30px;
     border-radius: 10px;
-    background-color: rgba(5, 5, 10, 0.9);
+    background-color: rgba(5, 5, 10, 0.75);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
   }
   
-  .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    border: 3px solid #3498db;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.avatar {
+  width: 150px; /* Змініть бажаний розмір */
+  height: 150px; /* Змініть бажаний розмір */
+  border: none; /* Видаляємо контур */
+  margin: 0px auto 0px;
+<!--   background-color: #1a1a1a; -->
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
   
   .avatar img {
     height: 90%;
@@ -51,6 +52,7 @@
   }
   
   .title {
+    margin-top: 0px;
     font-size: 28px;
     margin-bottom: 15px;
   }
@@ -151,10 +153,10 @@
 <body>
   <div class="container">
     <div class="avatar">
-      <img src="./avatar.png" alt="Аватар Жени">
+      <img src="https://github.com/jaroshevskii/r9/blob/main/avatar.png?raw=true" alt="Аватар Жени">
     </div>
     <h1 class="title">Женя</h1>
-    <p class="info">Выберите удобный способ связи</p>
+    <p class="info">Оберіть зручний для Вас вид зв'язку</p>
     <a class="button button-telegram" href="https://telegram.me/+380688526717" target="_blank">
       <i class="icon fab fa-telegram-plane"></i>Telegram
     </a>
@@ -165,8 +167,11 @@
       <i class="icon fab fa-whatsapp"></i>WhatsApp
     </a>
     <a class="button button-phone" href="tel:+380688526717">
-      <i class="icon fas fa-mobile-alt"></i>Мобильный
+      <i class="icon fas fa-mobile-alt"></i>Мобільний
     </a>
+    <a class="button button-contact" href="sms:+380688526717" title="Поділитись контактом" target="_blank">
+  <i class="icon fas fa-user-plus"></i>Поділитись контактом
+</a>
     <div class="decoration"></div>
     <div class="accent-lines">
       <div class="accent-line" style="top: 10%;"></div>
